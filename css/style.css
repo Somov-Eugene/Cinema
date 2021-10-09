@@ -1,9 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #ffffff;
   background-color: #621402;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
 }
 
 .container {
@@ -12,6 +21,24 @@ body {
 }
 
 .header {
+  min-height: 817px;
+  background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.3) 0%,#621402 85%), url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.logo img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.logo:focus {
+  outline: 1px solid #fe8e05;
+}
+
+.navbar {
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
@@ -34,8 +61,12 @@ body {
 }
 
 .menu-link {
-  color: #ffffff;
-  text-decoration: none;
+  color: inherit;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: #fe8e05;
 }
 
 .user {
@@ -49,4 +80,191 @@ body {
   width: 33px;
   height: 33px;
   border-radius: 50%;
+}
+
+.film {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.film-info {
+  max-width: 570px;
+}
+
+.film-title-small {
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.5;
+}
+
+.film-title {
+  margin-top: 11px;
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 116.67%;
+}
+
+.film-description {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.film-trailer {
+  margin: auto;
+  display: block;
+  font-size: 0;
+  outline: none;
+}
+
+.film-trailer:hover,
+.film-trailer:focus {
+  border-radius: 50%;
+  outline: 2px solid #fe8e05;
+}
+
+.film-trailer:hover path,
+.film-trailer:focus path {
+  fill: #fe8e05;
+}
+
+.film-details {
+  margin-top: 47px;
+  display: flex;
+  align-items: center;
+}
+
+.film-time {
+  margin-right: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.time-icon {
+  margin-right: 14px;
+}
+
+.film-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-icon {
+  margin-right: 12px;
+}
+
+.rating-current {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.session {
+  margin-top: 63px;
+  padding-top: 46px;
+  padding-bottom: 63px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.session-label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 118.75%;
+}
+
+.session-date-block {
+  display: flex;
+}
+
+.session-date-item {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: color, background-color 0.35s ease 0s;
+}
+
+.session-date-item:last-child {
+  margin-right: 0;
+}
+
+.session-date-item.selected {
+  color: #621402;
+  background-color: #fe8e05;
+}
+
+.session-date-item:hover,
+.session-date-item:focus {
+  color: #ffffff;
+  background-color: #fe8e05;
+}
+
+.session-month {
+  font-size: 16px;
+  line-height: 118.75%;
+  text-transform: uppercase;
+}
+
+.session-day {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 116.67%;
+}
+
+.session-week {
+  font-size: 19px;
+  line-height: 116%;
+  text-transform: lowercase;
+}
+
+.select {
+  margin-top: 13px;
+  padding: 18px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(240, 187, 187, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; /* Remove default arrow */
+
+  background-image: url("../img/select-arrow.svg"); /* Add custom arrow */
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) center;
+}
+
+.select:hover,
+.select:focus {
+  outline: 1px solid #fe8e05;
+}
+
+.select option {
+  background-color: rgba(98, 20, 2, 0.85);
+}
+
+.select-cinema {
+  min-width: 470px;
+}
+
+.select-time {
+  min-width: 110px;
 }
