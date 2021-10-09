@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Cinema</title>
+  <title>Бронирование билетов в кино</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -16,33 +16,132 @@
 </head>
 
 <body>
-  <header class="header container">
-    <a href="/">
-      <img src="img/logo.svg" alt="Логотип" />
-    </a>
-    <nav class="nav">
-      <ul class="menu">
-        <li class="menu-item">
-          <a href="#" class="menu-link">Главная</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">Фильмы</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">Кинотеатры</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">События</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">Поддержка</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="user">
-      <span>Привет, Мила</span>
-      <img class="avatar" src="img/avatar.jpg" alt="Аватар пользователя" />
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a class="logo" href="/">
+          <img src="img/logo.svg" alt="Логотип" />
+        </a>
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Фильмы</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Кинотеатры</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">События</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Поддержка</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user">
+          <span>Привет, Мила</span>
+          <img class="avatar" src="img/avatar.jpg" alt="Аватар пользователя" />
+        </div>
+      </div>
+      <!-- /.navbar -->
+
+      <div class="film">
+        <div class="film-info">
+          <small class="film-title-small">Avengers: Infinity War</small>
+          <h1 class="film-title">Мстители: война бесконечности</h1>
+          <p class="film-description">
+            Пока Мстители и&nbsp;их&nbsp;союзники продолжают защищать мир от&nbsp;различных опасностей, с&nbsp;которыми
+            не&nbsp;смог&nbsp;бы справиться один супергерой, новая угроза возникает из&nbsp;космоса: Танос.
+            Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности&nbsp;&mdash; артефакты
+            невероятной силы, с&nbsp;помощью которых можно менять реальность по&nbsp;своему желанию. Всё, с&nbsp;чем
+            Мстители сталкивались ранее, вело к&nbsp;этому моменту&nbsp;&mdash; судьба Земли никогда ещё не&nbsp;была
+            столь неопределённой.
+          </p>
+        </div>
+        <!-- /.film-info -->
+        <a class="film-trailer" href="#">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Воспроизвести трейлер" role="img">
+            <circle cx="50" cy="50" r="50" fill="#FFFFFF" />
+            <g clip-path="url(#play)">
+              <path d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z" fill="#F20D01" />
+            </g>
+            <defs>
+              <clipPath id="play">
+                <rect width="41.8013" height="41.8013" fill="#FFFFFF" transform="translate(34.1837 29.0816)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <!-- /.film-trailer -->
+      </div>
+      <!-- /.film -->
+      <div class="film-details">
+        <div class="film-time">
+          <img class="time-icon" src="img/clock.svg" alt="Иконка часов" />
+          <span class="time-counter">240&nbsp;мин.</span>
+        </div>
+        <div class="film-rating">
+          <img class="rating-icon" src="img/imdb.png" alt="Иконка IMDb" />
+          <div class="rating-counter">
+            <strong class="rating-current">9.2</strong> / 10
+          </div>
+        </div>
+      </div>
+      <!-- /.film-details -->
+
+      <div class="session">
+        <div class="session-date">
+          <span class="session-label">Дата</span>
+          <div class="session-date-block">
+            <div class="session-date-item selected" tabindex="0">
+              <span class="session-month">Апр</span>
+              <span class="session-day">27</span>
+              <span class="session-week">пт</span>
+            </div>
+            <div class="session-date-item" tabindex="0">
+              <span class="session-month">Апр</span>
+              <span class="session-day">28</span>
+              <span class="session-week">сб</span>
+            </div>
+            <div class="session-date-item" tabindex="0">
+              <span class="session-month">Апр</span>
+              <span class="session-day">29</span>
+              <span class="session-week">вс</span>
+            </div>
+            <div class="session-date-item" tabindex="0">
+              <span class="session-month">Апр</span>
+              <span class="session-day">30</span>
+              <span class="session-week">пн</span>
+            </div>
+          </div>
+        </div>
+        <!-- /.session-date -->
+        <div class="session-cinema">
+          <span class="session-label">Кинотеатр</span>
+          <select class="select select-cinema" name="cinema">
+            <option value="Октябрь">"Октябрь", ул. Новый Арбат, 24</option>
+            <option value="Росcия">"Росcия", Пушкинская пл., 2</option>
+            <option value="Эльбрус">"Эльбрус", Кавказский б-р, 17</option>
+            <option value="Пионер">"Пионер", Кутузовский просп., 21</option>
+          </select>
+        </div>
+        <!-- /.session-cinema -->
+        <div class="session-time">
+          <span class="session-label">Время</span>
+          <select class="select select-time" name="session-time">
+            <option value="12:00">12:00</option>
+            <option value="16:30">16:30</option>
+            <option value="20:30">20:30</option>
+            <option value="23:00">23:00</option>
+          </select>
+        </div>
+        <!-- /.session-time -->
+      </div>
     </div>
+    <!-- /.container -->
   </header>
 
 </body>
