@@ -93,6 +93,7 @@ a {
 }
 
 .film-title-small {
+  display: block;
   font-size: 24px;
   line-height: 150%;
   opacity: 0.5;
@@ -210,26 +211,28 @@ a {
 
 .session-date-item:hover,
 .session-date-item:focus {
-  color: #ffffff;
-  background-color: #fe8e05;
+  border-color: #fe8e05;
 }
 
 .session-month {
   font-size: 16px;
   line-height: 118.75%;
   text-transform: uppercase;
+  pointer-events: none;
 }
 
 .session-day {
   font-weight: 900;
   font-size: 30px;
   line-height: 116.67%;
+  pointer-events: none;
 }
 
 .session-week {
   font-size: 19px;
-  line-height: 116%;
+  line-height: 115.79%;
   text-transform: lowercase;
+  pointer-events: none;
 }
 
 .select {
@@ -245,9 +248,9 @@ a {
 
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none; /* Remove default arrow */
+  appearance: none;
 
-  background-image: url("../img/select-arrow.svg"); /* Add custom arrow */
+  background-image: url("../img/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 18px) center;
 }
@@ -267,4 +270,104 @@ a {
 
 .select-time {
   min-width: 110px;
+}
+
+.scheme {
+  margin: 62px 0;
+  background-color: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;
+}
+
+.scheme g[id^=seats] path {
+  cursor: pointer;
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+.scheme g[id^=seats] path:hover {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.scheme g[id^=seats] path.active {
+  fill: #FE8E05;
+}
+
+.scheme g[id^=seats] path.booked {
+  cursor: not-allowed;
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.legend {
+  max-width: 1018px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 38px;
+  display: flex;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.legend-item:last-child {
+  margin-right: 0;
+}
+
+.legend-item svg {
+  margin-right: 14px;
+}
+
+.legend-active path {
+  fill: #FE8E05;
+}
+
+.legend-booked path {
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.legend-text {
+  font-size: 16px;
+  line-height: 118.75%;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.price {
+  padding-bottom: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 116.67%;
+}
+
+.price-total,
+.price-currency {
+  font-size: 52px;
+  line-height: 117.31%;
+}
+
+.button {
+  display: block;
+  padding: 24px 52px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 116.67%;
+  color: #FFFFFF;
+  background-color: #FE8E05;
+  border-radius: 5px;
+}
+
+.button:hover,
+.button:focus {
+  background-color:rgba(254, 142, 5, 0.8);
+}
+
+.button:focus {
+  outline: 1px solid #FFFFFF;
 }
