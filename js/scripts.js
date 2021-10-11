@@ -5,6 +5,9 @@ const schemeSvg = document.getElementById("scheme-svg");
 const seatsSvg = schemeSvg.querySelectorAll("g[id^=seats]");
 const totalPriceTag = document.querySelector(".price-total");
 
+const menuButton = document.querySelector(".m-menu");
+const menu = document.querySelector(".menu");
+
 sessionDate.forEach((item) => {
   item.addEventListener("click", (e) => {
     if(!e.target.classList.contains("selected")){
@@ -25,4 +28,8 @@ seatsSvg.forEach((item) => {
       totalPriceTag.textContent = totalSeats * TICKET_COST;
     }
   });
+});
+
+menuButton.addEventListener("click", () => {
+  menu.classList.toggle("menu-open");
 });
