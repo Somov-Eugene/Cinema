@@ -290,27 +290,36 @@ a {
   max-width: 1170px;
 }
 
-.scheme g[id^=seats] path {
+#scheme-svg .seat path {
   cursor: pointer;
+}
+
+#scheme-svg .seat path,
+.legend-free path {
   fill: rgba(255, 255, 255, 0.2);
 }
 
-.scheme g[id^=seats] path:hover {
+#scheme-svg .seat path:hover {
   fill: rgba(255, 255, 255, 0.5);
 }
 
-.scheme g[id^=seats] path.active {
-  fill: #FE8E05;
+#scheme-svg .seat.active path,
+.legend-active path {
+  fill: #fe8e05;
 }
 
-.scheme g[id^=seats] path.booked {
+#scheme-svg .seat.booked path {
   cursor: not-allowed;
+}
+
+#scheme-svg .seat.booked path,
+.legend-booked path {
   fill: rgba(255, 255, 255, 0.05);
 }
 
 .legend {
   max-width: 1018px;
-  width: 88.75%;
+  width: 87.5%;
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 38px;
@@ -329,14 +338,6 @@ a {
 
 .legend-item svg {
   margin-right: 14px;
-}
-
-.legend-active path {
-  fill: #FE8E05;
-}
-
-.legend-booked path {
-  fill: rgba(255, 255, 255, 0.05);
 }
 
 .legend-text {
